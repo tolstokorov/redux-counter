@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Счётчик (Redux)</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Redux -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js"
+    integrity="sha512-F21iSaHGX/3NFz5SuwoH6pGhTPxtoJoWWULqQVPQPtLm7nbK5r8vRSSSYy3Aj+H39cVrVm4+3ikGoVD1AjE0sQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <!-- My code -->
+    <script src="./index.js" defer></script>
+
+    <style>
+        html, body {
+            height: 100%;
+
+            margin: 0;
+            padding: 0;
+
+            user-select: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: .5em;
+
+            background-color: mintcream;
+        }
+
+        .root {
+            box-sizing: border-box;
+            width: 320px;
+            padding: 8px;
+
+            display: flex;
+            flex-direction: column;
+            
+            border: 2px solid black;
+
+            background-color: lightgrey;
+        }
+        .title {
+            text-align: center;
+        }
+        .app {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 1rem;
+        }
+        .counter {
+            width: 200px;
+
+            text-align: center;
+
+            font-size: 5rem;
+
+            border-radius: 30%/50%;
+
+            background-color: yellow;
+        }
+        .btn {
+            --x: 50px;
+            width: var(--x);
+            height: var(--x);
+            line-height: var(--x);
+            font-size: var(--x);
+            
+            border: 1px solid black;
+            border-radius: 50%;
+
+            background-color: springgreen;
+            box-shadow: 0px 0px 5px 1px grey;
+
+            cursor: pointer;
+        }
+        .btn:active {
+            background-color: greenyellow;
+            box-shadow: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id='root' class='root'>
+        <h1 class='title'>Счётчик от
+            <span id='from'></span> до <span id='to'></span></h1>
+        
+        <div class='app'>
+            <button id='dec' class='btn'>&minus;</button>
+            <span id='counter' class='counter'>&nbsp;</span>
+            <button id='inc' class='btn'>&plus;</button>
+        </div>
+    </div>
+    
+    <small>redux</small>
+</body>
+</html>
